@@ -7,12 +7,12 @@
 }
 
 :root {
-    --clr-primary: #f25f3a;
-    --clr-secondary: hsl(228, 39%, 23%);
-    --clr-drk-gray: hsl(227, 12%, 61%);
-    --clr-lgt-gray: hsl(0, 0%, 98%);
-    --clr-drk-blue: hsl(233, 12%, 13%);
-    --clr-lgt-red: hsl(13, 100%, 96%);
+    --clr-primary: #F3603C;
+    --clr-secondary: #242D52;
+    --clr-drk-gray: #9095a7;
+    --clr-lgt-gray: #fafafa;
+    --clr-drk-blue: #1D1E25;
+    --clr-lgt-red: #FFF0EC;
 
     --fw-reg-400: 400;
     --fw-med-500: 500;
@@ -33,13 +33,32 @@ a {
     color: var(--clr-secondary);
     text-decoration: none;
     font-weight: var(--fw-med-500);
+    font-size: 13px;
 }
 
 a:hover {
     color: var(--clr-drk-gray);
 }
 
-li { list-style: none; }
+li { 
+    list-style: none; 
+}
+
+.btn {
+    background-color: var(--clr-primary);    
+    border: none;
+    border-radius: 50px;
+
+    -webkit-box-shadow: 0px 12px 10px -5px rgba(243,96,60,.4);
+    -moz-box-shadow: 0px 12px 10px -5px rgba(243,96,60,.4);
+    box-shadow: 0px 12px 10px -5px rgba(243,96,60,.4);
+
+    color: var(--clr-lgt-gray);
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: var(--fw-bld-700);
+    padding: 12px 32px;
+}
 
 .d-none {
     display: none;
@@ -52,9 +71,11 @@ li { list-style: none; }
     height: 64px;
     justify-content: space-between;
     position: relative;
+    /* background-color: #f25f3a; */
 }
 
 .nav {
+    border: none;
     border-radius: 5px;
     box-shadow: 7px 10px 42px -17px rgba(0,0,0,0.52);
     padding: 45px 0px;
@@ -64,7 +85,51 @@ li { list-style: none; }
     width: calc(100% - 48px);
 }
 
+@media only screen and (min-width: 768px) {
+    .nav {
+        box-shadow: unset;
+        display: block;
+        padding: unset;
+        position: unset;
+        text-align: center;
+        top: unset;
+        width: unset;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .nav--items {
+        display: flex;
+        margin-bottom: 10px;   
+    }
+}
+
 .nav--items li:not(:last-child) {
     margin-bottom: 30px; 
 }
+
+@media only screen and (min-width: 768px) {
+    .nav--items li:not(:last-child) {
+        margin-bottom: unset;  
+        margin-right: 32px;
+    }
+}
+
+.header--open-btn {
+    margin-bottom: 5px;
+}
+
+@media only screen and (min-width: 768px) {
+    .header--open-btn {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .header--cta {
+        display: block;
+    }
+}
+
+
 
